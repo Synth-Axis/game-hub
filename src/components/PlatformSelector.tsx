@@ -8,7 +8,7 @@ interface Props {
     selectedPlatform: Platform | null;
 }
 
-const PlatformSelector = ({ onSelectPlatform, selectedPlatform}: Props) => {
+const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
 
     const { data, error } = usePlatforms();
 
@@ -21,7 +21,7 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform}: Props) => {
                 {data.map(platform => <MenuItem onClick={() => onSelectPlatform(platform)} key={platform.id}>{platform.name}</MenuItem>)}
             </MenuList>
         </Menu>
-  )
-}
+    );
+};
 
 export default PlatformSelector
